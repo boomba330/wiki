@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-decoration: none;
+}
+
+h4 {
+    background-color: #ffa500;
+    text-shadow: 2px 2px 3px #6b6b6a;
+    margin-bottom: 20px;
+    padding: 0.5px;
+}
+
+p {
+    text-align: left;
+    text-shadow: 2px 1px 2px #6b6b6a;
+    margin-bottom: 10px;
+}
+
+.Page {
+    display: flex;
+    margin: 0 auto;
+    padding: 30px 300px 0px 0px;
+}
+
+.Card {
+    padding: 40px;
+    border-radius: 10px;
+    height: 605px;
+    width: 280px;
+    box-shadow: 0px 0px 10px 10px rgba(71, 71, 71, 0.2);
+    transition: 0.3s;
+}
+
+.Card:hover {
+    box-shadow: 0px 0px 10px 10px rgba(228, 173, 24, 0.2)
+}
+
+.container {
+    padding: 5px;
+    text-align: center;
+}
+
+.INFO {
+    padding: 40px;
+    border-radius: 10px;
+    height: 205px;
+    width: 605px;
+    box-shadow: 0px 0px 10px 10px rgba(71, 71, 71, 0.2);
+}
+
+.Side {
+    display: flex;
+    margin: 0 auto;
+    padding: 150px 30px 0px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #111;
+    padding: 20px;
+    border-right: 1px solid #333;
+    transition: transform 0.8s ease-in-out;
+}
+
+.sidebar h1 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #f1c40f;
+}
+
+.sidebar ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    transition: 0.3s, text-shadow 0.3s;
+    cursor: pointer;
+}
+
+.sidebar ul li {
+    padding: 8px 0;
+    cursor: pointer;
+    transition: color 0.2s;
+    text-decoration: none;
+
+}
+
+.sidebar ul li :hover {
+    color: #f1c40f;
+    text-shadow: 0 0 5px #ffa500;
+}
+
+.sidebar ul li.section-title {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+
+header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #f1c40f;
+}
+
+header p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+header .highlight {
+    color: #e67e22;
+    text-decoration: underline;
+}
+
+section {
+    margin-top: 25px;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #e67e22;
+}
+
+section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+section ul {
+    list-style: disc inside;
+    margin-top: 10px;
+}
+
+section ul li {
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+.toggle-btn {
+    position: fixed;
+    left: 205px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f1c40f;
+    color: #111;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+    transition: left 0.85s ease-in-out;
+}
+
+.sidebar.hidden+.toggle-btn {
+    left: 0;
+}
