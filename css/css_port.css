@@ -76,7 +76,7 @@ a {
     padding: 20px;
     border-right: 1px solid #333;
     transition: transform 0.3s ease-in-out, left 0.3s ease-in-out;
-    position: relative; /* desktop push aside */
+    position: relative; 
 }
 
 .sidebar h1 {
@@ -117,10 +117,16 @@ a {
     transform: translateX(-100%);
 }
 
+.sidebar.hidden ~ .content {
+    transform: translateX(0); 
+}
+
 .content {
     flex: 1;
     padding: 30px;
     overflow-y: auto;
+    transition: margin-left 0.3s ease-in-out;
+    transform: translateX(220px);
 }
 
 header h2 {
@@ -230,4 +236,28 @@ section ul li {
         opacity: 1;
         pointer-events: all;
     }
+    .Card {
+        width: 90%; 
+        height: auto; 
+        padding: 20px; 
+    }
+
+    .Card .container {
+        padding: 10px;
+        font-size: 0.9rem; 
+    }
+
+    .INFO {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        margin: 20px auto;
+        font-size: 0.95rem;
+    }
+
+    .Card + .Card,
+    .INFO + .Card {
+        margin-top: 20px;
+    }
+
 }
